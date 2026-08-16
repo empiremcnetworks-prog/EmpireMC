@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EmpireMC | Survival Semi-Anárquico</title>
+<meta name="description" content="EmpireMC - Survival Semi-Anárquico. Clanes, PvP, economía, raideos y conquista.">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:Arial,Helvetica,sans-serif;background:radial-gradient(circle at 50% -20%,#331010 0%,#111216 35%,#090a0d 75%);color:#eee;min-height:100vh}a{text-decoration:none;color:inherit}.topbar{position:sticky;top:0;z-index:1000;height:76px;padding:0 7%;display:flex;align-items:center;justify-content:space-between;background:rgba(8,9,12,.92);backdrop-filter:blur(14px);border-bottom:1px solid #2c2022}.brand{font-size:28px;font-weight:900;letter-spacing:.5px}.empire{background:linear-gradient(90deg,#ef4040,#d91c1c,#ad1414,#810c0c);-webkit-background-clip:text;-webkit-text-fill-color:transparent}.mc{color:#fff}.nav{display:flex;gap:24px;align-items:center}.nav a{color:#b9bbc2;font-size:14px;font-weight:800;transition:.2s}.nav a:hover{color:#fff}.discord{padding:10px 15px;border-radius:9px;background:linear-gradient(135deg,#d91c1c,#7b0909);color:#fff!important}.menu{display:none;background:none;border:0;color:#fff;font-size:26px}.hero{min-height:calc(100vh - 76px);display:grid;place-items:center;text-align:center;padding:80px 20px}.hero-inner{max-width:950px}.pill{display:inline-block;padding:8px 14px;border:1px solid rgba(217,28,28,.35);background:rgba(217,28,28,.08);color:#ff8585;border-radius:999px;font-size:12px;font-weight:900;letter-spacing:1px;margin-bottom:24px}.hero h1{font-size:clamp(60px,11vw,112px);line-height:.95;letter-spacing:-5px;margin-bottom:22px}.hero p{max-width:720px;margin:auto;color:#aeb1b9;font-size:18px;line-height:1.75}.buttons{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin:32px 0}.btn{padding:14px 22px;border-radius:10px;font-weight:900;font-size:14px;border:1px solid #2a2c33}.primary{background:linear-gradient(135deg,#d91c1c,#7c0909);border-color:#9d1212}.secondary{background:#17181e}.ipbox{display:inline-flex;gap:18px;align-items:center;padding:13px 15px 13px 20px;background:#15161b;border:1px solid #292b33;border-radius:12px}.ipmeta{text-align:left}.ipmeta small{display:block;color:#70747d;font-size:10px;letter-spacing:1.5px;margin-bottom:3px}.ipmeta strong{font-size:16px}.copy{border:0;padding:11px 15px;border-radius:8px;background:#d91c1c;color:white;font-weight:900;cursor:pointer}section{padding:90px 7%}.head{text-align:center;max-width:700px;margin:0 auto 45px}.head span{color:#e64040;font-size:12px;font-weight:900;letter-spacing:3px}.head h2{font-size:clamp(32px,5vw,48px);margin:10px 0}.head p{color:#8e929b;line-height:1.7}.cards{max-width:1150px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:#17181e;border:1px solid #292b33;border-radius:17px;padding:30px;transition:.22s}.card:hover{transform:translateY(-6px);border-color:#772020}.icon{width:54px;height:54px;display:grid;place-items:center;border-radius:13px;background:rgba(217,28,28,.1);border:1px solid rgba(217,28,28,.25);font-size:25px;margin-bottom:20px}.card h3{font-size:21px;margin-bottom:10px}.card p{color:#93969f;line-height:1.7;font-size:14px;margin-bottom:20px}.card .go{color:#ff6262;font-size:13px;font-weight:900}.mode-wrap{max-width:780px;margin:auto}.mode{position:relative;overflow:hidden;min-height:360px;padding:42px;border-radius:22px;border:1px solid #342326;background:radial-gradient(circle at top right,rgba(217,28,28,.22),transparent 45%),linear-gradient(160deg,#17181e,#0e0f13);display:flex;flex-direction:column;justify-content:flex-end}.mode-badge{position:absolute;top:24px;left:24px;padding:8px 12px;border-radius:999px;background:rgba(217,28,28,.1);border:1px solid rgba(217,28,28,.3);color:#ff7878;font-weight:900;font-size:11px}.mode h3{font-size:34px;margin-bottom:10px}.mode p{color:#a8abb3;line-height:1.75}.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}.tag{padding:8px 11px;border-radius:999px;background:#101116;border:1px solid #2a2c33;color:#cacdd3;font-size:12px;font-weight:800}.cta{max-width:1050px;margin:auto;text-align:center;padding:65px 25px;border-radius:24px;border:1px solid #3a2426;background:radial-gradient(circle at 50% 0,rgba(217,28,28,.22),transparent 55%),#111216}.cta h2{font-size:clamp(34px,5vw,54px);margin-bottom:12px}.cta p{color:#979aa2;line-height:1.7;max-width:620px;margin:0 auto 25px}footer{text-align:center;padding:40px 20px;border-top:1px solid #22242b;color:#747780;font-size:12px;line-height:1.8}@media(max-width:850px){.menu{display:block}.nav{display:none;position:absolute;top:76px;left:0;width:100%;padding:22px;background:#0d0e12;flex-direction:column;border-bottom:1px solid #292b33}.nav.open{display:flex}.cards{grid-template-columns:1fr}.hero h1{letter-spacing:-2px}}@media(max-width:520px){.topbar{padding:0 5%}.hero{padding:60px 18px}.hero p{font-size:16px}.buttons{flex-direction:column}.btn{width:100%}.ipbox{width:100%;justify-content:space-between}section{padding:70px 5%}.mode{padding:30px;min-height:420px}}
+</style>
+</head>
+<body>
+<header class="topbar">
+<a class="brand" href="./PaginaPrincipal.html"><span class="empire">EMPIRE</span><span class="mc">MC</span></a>
+<button class="menu" onclick="toggleMenu()">☰</button>
+<nav class="nav" id="nav">
+<a href="./PaginaPrincipal.html">Inicio</a>
+<a href="./reglamento.html">Reglamento</a>
+<a href="./rangos.html">Rangos</a>
+<a href="./Guiastaffdc.html">Guía Staff</a>
+<a class="discord" href="https://discord.gg/TU-DISCORD" target="_blank" rel="noopener">Discord</a>
+</nav>
+</header>
+<main>
+<section class="hero">
+<div class="hero-inner">
+<div class="pill">⚔ SURVIVAL SEMI-ANÁRQUICO</div>
+<h1><span class="empire">EMPIRE</span><span class="mc">MC</span></h1>
+<p>Construye tu reino, forma clanes, haz alianzas, lucha por recursos y conquista un mundo donde la libertad y la competencia forman parte de la experiencia.</p>
+<div class="buttons"><a class="btn primary" href="#modalidad">⚔ Explorar EmpireMC</a><a class="btn secondary" href="./reglamento.html">📜 Ver reglamento</a></div>
+<div class="ipbox"><div class="ipmeta"><small>IP DEL SERVIDOR</small><strong id="serverIp">play.empiremc.net</strong></div><button class="copy" id="copyBtn" onclick="copyIP()">COPIAR</button></div>
+</div>
+</section>
+<section>
+<div class="head"><span>INFORMACIÓN</span><h2>Todo EmpireMC en un solo lugar</h2><p>Desde esta página puedes entrar directamente al reglamento, revisar los rangos disponibles y abrir la guía interna del Staff.</p></div>
+<div class="cards">
+<a class="card" href="./reglamento.html"><div class="icon">📜</div><h3>Reglamento</h3><p>Consulta las reglas, sanciones y acciones permitidas dentro del Survival Semi-Anárquico.</p><div class="go">Abrir reglamento →</div></a>
+<a class="card" href="./rangos.html"><div class="icon">👑</div><h3>Rangos</h3><p>Conoce los rangos premium de EmpireMC: Lord y King, con sus ventajas y presentación.</p><div class="go">Ver rangos →</div></a>
+<a class="card" href="./Guiastaffdc.html"><div class="icon">🛡️</div><h3>Guía Staff</h3><p>Procedimientos para reportes, soporte, apelaciones y normas internas del equipo.</p><div class="go">Abrir guía →</div></a>
+</div>
+</section>
+<section id="modalidad">
+<div class="head"><span>MODALIDAD</span><h2>Survival Semi-Anárquico</h2><p>Una única modalidad centrada en libertad, PvP, clanes, raideos y progresión.</p></div>
+<div class="mode-wrap"><div class="mode"><div class="mode-badge">⚔ SEMI-ANÁRQUICO</div><h3>Crea tu propio imperio</h3><p>Forma alianzas o rómpelas, crea clanes, pelea contra otros jugadores, roba recursos, raidea bases y protege lo que construyas. La libertad forma parte de EmpireMC, pero los hacks, exploits y ventajas ilegales siguen prohibidos.</p><div class="tags"><span class="tag">⚔ PvP</span><span class="tag">🧨 Raideos</span><span class="tag">💰 Economía</span><span class="tag">🛡️ Clanes</span><span class="tag">🤝 Alianzas</span><span class="tag">🩸 Traiciones</span><span class="tag">🏰 Bases</span></div></div></div>
+</section>
+<section><div class="cta"><h2>¿Listo para entrar?</h2><p>Copia la IP, agrega EmpireMC a tu lista de servidores y empieza a construir tu imperio.</p><button class="btn primary" onclick="copyIP()">📋 Copiar IP</button></div></section>
+</main>
+<footer><div class="brand"><span class="empire">EMPIRE</span><span class="mc">MC</span></div><div>⚔ Libertad para jugar · 🛡️ Competencia justa · 👑 Construye tu imperio</div><div>© 2026 EmpireMC · No afiliado con Mojang Studios ni Microsoft.</div></footer>
+<script>
+function toggleMenu(){document.getElementById('nav').classList.toggle('open')}
+function copyIP(){const ip=document.getElementById('serverIp').innerText;navigator.clipboard.writeText(ip).then(()=>{const b=document.getElementById('copyBtn');if(b){const t=b.innerText;b.innerText='¡COPIADO!';setTimeout(()=>b.innerText=t,1500)}})}
+document.querySelectorAll('#nav a').forEach(a=>a.addEventListener('click',()=>document.getElementById('nav').classList.remove('open')))
+</script>
+</body>
+</html>

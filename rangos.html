@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rangos Premium | EmpireMC</title>
+<meta name="description" content="Conoce los rangos premium Lord y King de EmpireMC y todos sus beneficios.">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:radial-gradient(circle at 50% -10%,#351113 0%,#121318 34%,#090a0d 78%);color:#e7e8ec;min-height:100vh}
+.topbar{height:76px;padding:0 7%;display:flex;align-items:center;justify-content:space-between;background:rgba(8,9,12,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(217,28,28,.22);position:sticky;top:0;z-index:1000}
+.brand{text-decoration:none;font-size:27px;font-weight:900;letter-spacing:.5px}.empire{background:linear-gradient(90deg,#ef4040,#d91c1c,#ad1414,#810c0c);-webkit-background-clip:text;-webkit-text-fill-color:transparent}.mc{color:#fff}
+.nav{display:flex;gap:24px;align-items:center}.nav a{text-decoration:none;color:#b8bbc3;font-weight:800;font-size:14px;transition:.2s}.nav a:hover,.nav a.active{color:#fff}.discord{padding:10px 15px;border-radius:9px;background:linear-gradient(135deg,#d91c1c,#7b0909);color:#fff!important;box-shadow:0 8px 24px rgba(217,28,28,.18)}
+.menu{display:none;background:none;border:0;color:white;font-size:26px;cursor:pointer}
+.wrap{max-width:1160px;margin:auto;padding:72px 20px 80px}.hero{text-align:center;max-width:820px;margin:0 auto 52px}.badge{display:inline-flex;align-items:center;gap:8px;padding:8px 15px;border-radius:999px;border:1px solid rgba(217,28,28,.35);background:rgba(217,28,28,.08);color:#ff8c8c;font-size:12px;font-weight:900;letter-spacing:1px;margin-bottom:18px}.hero h1{font-size:clamp(40px,7vw,66px);line-height:1.05;margin-bottom:14px}.hero p{color:#9da1aa;line-height:1.75;font-size:16px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;align-items:stretch}.rank{position:relative;overflow:hidden;border-radius:24px;padding:34px;border:1px solid #2b2d35;background:linear-gradient(155deg,#191a20,#111217);box-shadow:0 20px 55px rgba(0,0,0,.28)}.rank::before{content:"";position:absolute;inset:0 0 auto 0;height:4px}.rank::after{content:"";position:absolute;width:330px;height:330px;border-radius:50%;top:-170px;right:-150px;filter:blur(16px);opacity:.25;pointer-events:none}.rank-lord::before{background:linear-gradient(90deg,#2f80ed,#56a8ff,#1f5fbf)}.rank-lord::after{background:#2979ff}.rank-king::before{background:linear-gradient(90deg,#b8860b,#ffd45c,#ffb300)}.rank-king::after{background:#ffc107}
+.rank-head{position:relative;z-index:1;display:flex;align-items:center;gap:16px;padding-bottom:22px;border-bottom:1px solid #2a2c33;margin-bottom:22px}.rank-icon{width:66px;height:66px;display:grid;place-items:center;border-radius:17px;font-size:31px;background:#0f1014;border:1px solid #30323a}.rank h2{font-size:32px;letter-spacing:.5px}.lord{color:#5caaff}.king{color:#ffd45c}.rank-sub{color:#858a94;font-size:13px;margin-top:4px}.intro{position:relative;z-index:1;color:#adb1ba;line-height:1.7;margin-bottom:24px}
+.section-title{position:relative;z-index:1;font-size:12px;font-weight:900;letter-spacing:1.7px;text-transform:uppercase;color:#7f848e;margin:24px 0 10px}.features{position:relative;z-index:1;display:grid;gap:10px}.feature{display:flex;align-items:flex-start;gap:10px;padding:12px 14px;border-radius:11px;background:#101116;border:1px solid #292b33;color:#cfd2d8;font-size:14px;line-height:1.5}.feature strong{color:#fff}.commands{display:flex;flex-wrap:wrap;gap:8px;position:relative;z-index:1}.cmd{font-family:Consolas,monospace;padding:8px 10px;border-radius:8px;background:#0d0e12;border:1px solid #2a2c33;color:#e9eaed;font-size:13px}.rank-lord .cmd{border-color:rgba(86,168,255,.25)}.rank-king .cmd{border-color:rgba(255,212,92,.25)}
+.values{position:relative;z-index:1;display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.value{padding:14px;border-radius:12px;background:#101116;border:1px solid #292b33}.value span{display:block;color:#858a94;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:1px;margin-bottom:5px}.value strong{font-size:17px;color:#fff}.protection-list{display:flex;flex-wrap:wrap;gap:8px}.prot{padding:8px 11px;border-radius:999px;background:#0e0f13;border:1px solid #2d3038;font-weight:800;font-size:13px}.rank-lord .prot{color:#79bbff;border-color:rgba(86,168,255,.3)}.rank-king .prot{color:#ffe27c;border-color:rgba(255,212,92,.3)}
+.notice{margin-top:36px;padding:18px 20px;border-radius:14px;background:rgba(217,28,28,.06);border:1px solid rgba(217,28,28,.22);color:#c7c9cf;line-height:1.7;text-align:center}.notice strong{color:#fff}.back{display:flex;justify-content:center;margin-top:32px}.btn{text-decoration:none;padding:13px 21px;border-radius:10px;background:linear-gradient(135deg,#d91c1c,#7b0909);color:#fff;font-weight:900;box-shadow:0 10px 28px rgba(217,28,28,.18);transition:.2s}.btn:hover{transform:translateY(-2px)}
+footer{text-align:center;padding:35px 15px;border-top:1px solid #22242b;color:#777b84;font-size:12px}
+@media(max-width:850px){.menu{display:block}.nav{display:none;position:absolute;top:76px;left:0;width:100%;padding:22px;background:#0d0e12;flex-direction:column;border-bottom:1px solid #292b33}.nav.open{display:flex}.grid{grid-template-columns:1fr}.values{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.topbar{padding:0 5%}.wrap{padding:55px 16px}.rank{padding:24px}.values{grid-template-columns:1fr}.hero h1{font-size:40px}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="./PaginaPrincipal.html"><span class="empire">EMPIRE</span><span class="mc">MC</span></a>
+  <button class="menu" onclick="toggleMenu()" aria-label="Abrir menú">☰</button>
+  <nav class="nav" id="nav">
+    <a href="./PaginaPrincipal.html">Inicio</a>
+    <a href="./reglamento.html">Reglamento</a>
+    <a href="./rangos.html" class="active">Rangos</a>
+    <a href="./Guiastaffdc.html">Guía Staff</a>
+    <a class="discord" href="https://discord.gg/TU-DISCORD" target="_blank" rel="noopener noreferrer">Discord</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <div class="badge">👑 RANGOS PREMIUM</div>
+    <h1>Elige tu rango en EmpireMC</h1>
+    <p>Destaca dentro del servidor con ventajas exclusivas, más capacidad de progreso y una presencia visual diferenciada. Actualmente puedes elegir entre <strong>LORD</strong> y <strong>KING</strong>.</p>
+  </section>
+
+  <section class="grid">
+    <article class="rank rank-lord">
+      <div class="rank-head">
+        <div class="rank-icon">💠</div>
+        <div><h2 class="lord">LORD</h2><div class="rank-sub">Rango premium · Azul</div></div>
+      </div>
+      <p class="intro">Un rango pensado para quienes buscan una presencia superior dentro de EmpireMC y acceso a ventajas exclusivas.</p>
+
+      <div class="section-title">Identidad del rango</div>
+      <div class="features">
+        <div class="feature">💬 <div><strong>Prefijo exclusivo:</strong> LORD</div></div>
+        <div class="feature">🎨 <div><strong>Color distintivo:</strong> azul</div></div>
+        <div class="feature">✨ <div>Mayor presencia dentro del servidor</div></div>
+        <div class="feature">🛡️ <div>Acceso a ventajas configuradas para Lord</div></div>
+      </div>
+
+      <div class="section-title">Comandos únicos</div>
+      <div class="commands">
+        <span class="cmd">/beneficios</span><span class="cmd">/cosmeticos</span><span class="cmd">/back</span><span class="cmd">/afk</span><span class="cmd">/enderchest</span><span class="cmd">/feed</span>
+      </div>
+
+      <div class="section-title">Beneficios</div>
+      <div class="values">
+        <div class="value"><span>Kit</span><strong>Lord</strong></div>
+        <div class="value"><span>Homes</span><strong>3</strong></div>
+        <div class="value"><span>Trabajos</span><strong>3</strong></div>
+        <div class="value"><span>Cazar</span><strong>5 personas</strong></div>
+      </div>
+
+      <div class="section-title">Protecciones grifeables</div>
+      <div class="protection-list"><span class="prot">30x30</span><span class="prot">40x40</span></div>
+    </article>
+
+    <article class="rank rank-king">
+      <div class="rank-head">
+        <div class="rank-icon">👑</div>
+        <div><h2 class="king">KING</h2><div class="rank-sub">Rango premium superior · Dorado</div></div>
+      </div>
+      <p class="intro">El rango premium superior de EmpireMC, creado para jugadores que buscan la mayor distinción y más capacidad dentro del servidor.</p>
+
+      <div class="section-title">Identidad del rango</div>
+      <div class="features">
+        <div class="feature">👑 <div><strong>Prefijo exclusivo:</strong> KING</div></div>
+        <div class="feature">🌟 <div><strong>Color distintivo:</strong> dorado</div></div>
+        <div class="feature">✨ <div>Mayor presencia dentro del servidor</div></div>
+        <div class="feature">🛡️ <div>Acceso a ventajas configuradas para King</div></div>
+      </div>
+
+      <div class="section-title">Comandos únicos</div>
+      <div class="commands">
+        <span class="cmd">/beneficios</span><span class="cmd">/cosmeticos</span><span class="cmd">/back</span><span class="cmd">/afk</span><span class="cmd">/enderchest</span><span class="cmd">/feed</span>
+      </div>
+
+      <div class="section-title">Beneficios</div>
+      <div class="values">
+        <div class="value"><span>Kit</span><strong>Lord y King</strong></div>
+        <div class="value"><span>Homes</span><strong>5</strong></div>
+        <div class="value"><span>Trabajos</span><strong>5</strong></div>
+        <div class="value"><span>Cazar</span><strong>5 personas</strong></div>
+      </div>
+
+      <div class="section-title">Protecciones grifeables</div>
+      <div class="protection-list"><span class="prot">30x30</span><span class="prot">40x40</span><span class="prot">50x50</span></div>
+    </article>
+  </section>
+
+  <div class="notice">⚔️ <strong>EmpireMC Survival Semi-Anárquico:</strong> las protecciones indicadas son grifeables según las mecánicas y reglas establecidas por el servidor.</div>
+  <div class="back"><a class="btn" href="./PaginaPrincipal.html">← Volver al inicio</a></div>
+</main>
+
+<footer>© 2026 EmpireMC · Rangos Premium</footer>
+<script>
+function toggleMenu(){document.getElementById('nav').classList.toggle('open')}
+document.querySelectorAll('#nav a').forEach(a=>a.addEventListener('click',()=>document.getElementById('nav').classList.remove('open')))
+</script>
+</body>
+</html>
