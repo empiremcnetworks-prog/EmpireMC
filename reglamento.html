@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reglamento Oficial | EmpireMC</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background:
+                radial-gradient(circle at top, #241313 0%, #111216 35%, #0b0c10 100%);
+            color: #e5e7eb;
+            line-height: 1.65;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: auto;
+            padding: 35px 18px 60px;
+        }
+
+        .hero {
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(217, 28, 28, .12),
+                    rgba(18, 18, 22, .96)
+                );
+            border: 1px solid #382222;
+            border-radius: 22px;
+            padding: 42px 28px;
+            text-align: center;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, .4);
+            margin-bottom: 28px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 7px 15px;
+            background: rgba(217, 28, 28, .12);
+            border: 1px solid rgba(217, 28, 28, .35);
+            border-radius: 999px;
+            color: #ff8080;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: .7px;
+            margin-bottom: 17px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+
+            background: linear-gradient(
+                90deg,
+                #f04a4a,
+                #d91c1c,
+                #b51515,
+                #8f0d0d,
+                #f2f2f2
+            );
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero h2 {
+            font-size: 18px;
+            color: #c8cad1;
+            margin-bottom: 18px;
+        }
+
+        .hero p {
+            max-width: 850px;
+            margin: auto;
+            color: #aeb2bb;
+        }
+
+        .notice {
+            margin-top: 22px;
+            background: rgba(255, 193, 7, .07);
+            border: 1px solid rgba(255, 193, 7, .28);
+            border-radius: 12px;
+            padding: 15px 18px;
+            color: #ffd66b;
+        }
+
+        .nav {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            margin-bottom: 28px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            text-align: center;
+            background: #17181e;
+            border: 1px solid #292b33;
+            border-radius: 10px;
+            color: #d8dae0;
+            padding: 12px 8px;
+            transition: .2s ease;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .nav a:hover {
+            transform: translateY(-2px);
+            border-color: #8b2323;
+            background: #1e181a;
+            color: #fff;
+        }
+
+        .section {
+            background: #17181e;
+            border: 1px solid #292b33;
+            border-radius: 18px;
+            overflow: hidden;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 28px rgba(0, 0, 0, .2);
+        }
+
+        .section-title {
+            padding: 19px 23px;
+            font-size: 24px;
+            font-weight: bold;
+            border-bottom: 1px solid #292b33;
+        }
+
+        .title-report {
+            color: #ff6969;
+        }
+
+        .title-game {
+            color: #ff9b54;
+        }
+
+        .title-chat {
+            color: #65b7ff;
+        }
+
+        .title-other {
+            color: #c494ff;
+        }
+
+        .title-appeal {
+            color: #76e39b;
+        }
+
+        .content {
+            padding: 25px;
+        }
+
+        .content p {
+            color: #c6c9d0;
+            margin-bottom: 16px;
+        }
+
+        .info {
+            background: #111218;
+            border-left: 4px solid #5865f2;
+            border-radius: 8px;
+            padding: 16px 18px;
+            margin: 18px 0;
+            color: #cfd2da;
+        }
+
+        .danger {
+            background: rgba(220, 53, 69, .07);
+            border: 1px solid rgba(220, 53, 69, .3);
+            color: #ff8790;
+            border-radius: 10px;
+            padding: 15px 18px;
+            margin: 18px 0;
+        }
+
+        .warning {
+            background: rgba(255, 193, 7, .07);
+            border: 1px solid rgba(255, 193, 7, .3);
+            color: #ffd86a;
+            border-radius: 10px;
+            padding: 15px 18px;
+            margin: 18px 0;
+        }
+
+        .success {
+            background: rgba(40, 167, 69, .07);
+            border: 1px solid rgba(40, 167, 69, .3);
+            color: #79e694;
+            border-radius: 10px;
+            padding: 15px 18px;
+            margin: 18px 0;
+        }
+
+        h3 {
+            color: #fff;
+            margin-top: 24px;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            padding-left: 24px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin: 7px 0;
+            color: #cfd2d8;
+        }
+
+        code {
+            background: #0d0e12;
+            border: 1px solid #282a31;
+            padding: 3px 8px;
+            border-radius: 6px;
+            color: #8dc8ff;
+        }
+
+        .rule-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .rule-box {
+            background: #111218;
+            border: 1px solid #292b33;
+            border-radius: 10px;
+            padding: 14px 16px;
+            color: #cfd2d8;
+        }
+
+        .rule-box strong {
+            color: #fff;
+        }
+
+        .allowed {
+            border-left: 4px solid #46c76f;
+        }
+
+        .forbidden {
+            border-left: 4px solid #e64d5d;
+        }
+
+        .table-wrap {
+            overflow-x: auto;
+            margin-top: 20px;
+            border-radius: 12px;
+            border: 1px solid #2c2e36;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 720px;
+            background: #121318;
+        }
+
+        th {
+            background: #1e2027;
+            color: #fff;
+            text-align: left;
+            padding: 14px 15px;
+            font-size: 14px;
+        }
+
+        td {
+            padding: 14px 15px;
+            border-top: 1px solid #292b33;
+            color: #cdd0d7;
+            vertical-align: top;
+        }
+
+        tr:hover td {
+            background: rgba(255, 255, 255, .015);
+        }
+
+        .action {
+            font-weight: bold;
+            color: #f0f0f2;
+        }
+
+        .warn-text {
+            color: #ffd05a;
+        }
+
+        .mute-text {
+            color: #73c7ff;
+        }
+
+        .ban-text {
+            color: #ff737d;
+        }
+
+        .kick-text {
+            color: #d2d5dc;
+        }
+
+        .permitted-card {
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(40, 167, 69, .08),
+                    rgba(17, 18, 24, 1)
+                );
+            border: 1px solid rgba(40, 167, 69, .25);
+            border-radius: 14px;
+            padding: 18px;
+            margin-top: 20px;
+        }
+
+        .permitted-card h3 {
+            color: #75e392;
+            margin-top: 0;
+        }
+
+        .appeal-card {
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(88, 101, 242, .09),
+                    rgba(17, 18, 24, 1)
+                );
+            border: 1px solid rgba(88, 101, 242, .3);
+            border-radius: 14px;
+            padding: 20px;
+            margin-top: 18px;
+        }
+
+        .footer {
+            margin-top: 35px;
+            text-align: center;
+            color: #898d96;
+        }
+
+        .footer-logo {
+            font-size: 25px;
+            font-weight: bold;
+            margin-bottom: 7px;
+
+            background: linear-gradient(
+                90deg,
+                #d91c1c,
+                #a91010,
+                #ffffff
+            );
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        @media (max-width: 800px) {
+
+            .nav {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .rule-list {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+        }
+    
+        /* ===== Navegación compartida EmpireMC ===== */
+        .em-topbar{max-width:1150px;margin:0 auto 24px;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;gap:18px;background:#111216;border:1px solid #292b33;border-radius:14px;box-shadow:0 8px 25px rgba(0,0,0,.22)}
+        .em-brand{text-decoration:none;font-size:24px;font-weight:900;white-space:nowrap}
+        .em-brand-empire{background:linear-gradient(90deg,#ef4040,#d91c1c,#ad1414,#810c0c);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+        .em-brand-mc{color:#fff}
+        .em-links{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:10px}
+        .em-links a{text-decoration:none;color:#c8cad1;background:#17181e;border:1px solid #292b33;border-radius:9px;padding:9px 12px;font-size:13px;font-weight:800;transition:.2s}
+        .em-links a:hover{color:#fff;border-color:#8b2323;background:#1e181a}
+        @media(max-width:700px){.em-topbar{flex-direction:column}.em-links{justify-content:center}.em-links a{font-size:12px}}
+
+    </style>
+</head>
+
+<body>
+
+<div class="em-topbar">
+  <a class="em-brand" href="PaginaPrincipal.html"><span class="em-brand-empire">EMPIRE</span><span class="em-brand-mc">MC</span></a>
+  <div class="em-links">
+    <a href="PaginaPrincipal.html">Inicio</a>
+    <a href="reglamento.html">Reglamento</a>
+    <a href="rangos.html">Rangos</a>
+    <a href="Guiastaffdc.html">Guía Staff</a>
+  </div>
+</div>
+
+
+<div class="container">
+
+    <section class="hero">
+
+        <div class="hero-badge">
+            🏛️ REGLAMENTO OFICIAL
+        </div>
+
+        <h1>EmpireMC</h1>
+
+        <h2>Reglas y sanciones — Survival Semi-Anárquico</h2>
+
+        <p>
+            En EmpireMC queremos mantener una experiencia libre, competitiva
+            y entretenida sin perder la seguridad de nuestra comunidad.
+            Al tratarse de un servidor Semi-Anárquico, acciones como el PvP,
+            los robos, los raideos, las traiciones y la destrucción de bases
+            mediante mecánicas permitidas forman parte de la experiencia.
+        </p>
+
+        <div class="notice">
+            ⚠️ El Staff se reserva el derecho de intervenir en situaciones
+            excepcionales que representen un abuso evidente, una ventaja injusta
+            o un riesgo para el servidor.
+        </div>
+
+    </section>
+
+
+    <nav class="nav">
+        <a href="#reportar">🚨 Reportar</a>
+        <a href="#juego">⚔️ Juego</a>
+        <a href="#chat">💬 Chat</a>
+        <a href="#otros">📌 Otros</a>
+        <a href="#apelaciones">⚖️ Apelaciones</a>
+    </nav>
+
+
+    <!-- REPORTAR -->
+
+    <section class="section" id="reportar">
+
+        <div class="section-title title-report">
+            🚨 REPORTAR A UN JUGADOR
+        </div>
+
+        <div class="content">
+
+            <p>
+                Puedes reportar a cualquier jugador que esté incumpliendo
+                las reglas utilizando:
+            </p>
+
+            <div class="info">
+                🎮 <code>/report &lt;jugador&gt;</code>
+            </div>
+
+            <p>
+                También puedes grabar las pruebas y abrir un ticket de reporte
+                en nuestro Discord.
+            </p>
+
+            <div class="warning">
+                📸 Los reportes de hacks, hostigamiento, exploits u otras
+                infracciones importantes deberán contar con pruebas suficientes
+                siempre que sea posible.
+            </div>
+
+            <div class="danger">
+                ❌ Presentar pruebas manipuladas o utilizar el sistema de reportes
+                para perjudicar deliberadamente a otro jugador también podrá
+                ser sancionado.
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- JUEGO -->
+
+    <section class="section" id="juego">
+
+        <div class="section-title title-game">
+            ⚔️ JUEGO
+        </div>
+
+        <div class="content">
+
+            <p>
+                Estas reglas afectan directamente a la jugabilidad y a la
+                competencia entre jugadores.
+            </p>
+
+
+            <div class="permitted-card">
+
+                <h3>✅ ¿Qué está permitido por ser Semi-Anárquico?</h3>
+
+                <div class="rule-list">
+
+                    <div class="rule-box allowed">
+                        ⚔️ <strong>PvP</strong> entre jugadores.
+                    </div>
+
+                    <div class="rule-box allowed">
+                        🧨 <strong>Raidear</strong> bases.
+                    </div>
+
+                    <div class="rule-box allowed">
+                        💰 <strong>Robar</strong> recursos.
+                    </div>
+
+                    <div class="rule-box allowed">
+                        🏰 <strong>Grifear bases enemigas</strong> usando
+                        mecánicas permitidas.
+                    </div>
+
+                    <div class="rule-box allowed">
+                        🤝 Crear o romper <strong>alianzas</strong>.
+                    </div>
+
+                    <div class="rule-box allowed">
+                        🩸 <strong>Traicionar</strong> jugadores o clanes.
+                    </div>
+
+                    <div class="rule-box allowed">
+                        👥 Crear equipos o grupos libremente.
+                    </div>
+
+                    <div class="rule-box allowed">
+                        🗡️ Atacar jugadores sin necesidad de aviso previo.
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <h3>🚫 Modificaciones ilegales</h3>
+
+            <p>
+                Está prohibido utilizar programas, modificaciones, macros
+                o hardware configurado específicamente para obtener una ventaja
+                injusta sobre otros jugadores.
+            </p>
+
+            <div class="rule-list">
+
+                <div class="rule-box forbidden">❌ X-Ray</div>
+                <div class="rule-box forbidden">❌ KillAura</div>
+                <div class="rule-box forbidden">❌ AimAssist</div>
+                <div class="rule-box forbidden">❌ TriggerBot</div>
+                <div class="rule-box forbidden">❌ Reach</div>
+                <div class="rule-box forbidden">❌ ESP / Tracers</div>
+                <div class="rule-box forbidden">❌ Fly / Speed / Bhop</div>
+                <div class="rule-box forbidden">❌ AutoCrystal</div>
+                <div class="rule-box forbidden">❌ AutoClicker</div>
+                <div class="rule-box forbidden">❌ Macros de combate</div>
+                <div class="rule-box forbidden">❌ Timer / Blink</div>
+                <div class="rule-box forbidden">❌ Dupes / Exploits</div>
+
+            </div>
+
+
+            <div class="table-wrap">
+
+                <table>
+
+                    <thead>
+                    <tr>
+                        <th>Acción</th>
+                        <th>Primera sanción</th>
+                        <th>Reincidencia</th>
+                        <th>Máximo</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+
+                    <tr>
+                        <td class="action">Modificaciones ilegales / Hacks</td>
+                        <td class="ban-text">❌ Ban 7d</td>
+                        <td class="ban-text">❌ IPBan 15d</td>
+                        <td class="ban-text">❌ IPBan 30d</td>
+                    </tr>
+
+                    <tr>
+                        <td class="action">X-Ray</td>
+                        <td class="ban-text">❌ Ban 5d</td>
+                        <td class="ban-text">❌ Ban 10d</td>
+                        <td class="ban-text">❌ IPBan 20d</td>
+                    </tr>
+
+                    <tr>
+                        <td class="action">Aprovechamiento de bugs</td>
+                        <td class="kick-text">💨 Kick + ⚠️ Warn</td>
+                        <td class="ban-text">❌ Ban 2d</td>
+                        <td class="ban-text">❌ Ban 7d</td>
+                    </tr>
+
+                    <tr>
+                        <td class="action">Dupe intencional</td>
+                        <td class="ban-text">❌ Ban 7d</td>
+                        <td class="ban-text">❌ IPBan 15d</td>
+                        <td class="ban-text">❌ IPBan 30d</td>
+                    </tr>
+
+                    <tr>
+                        <td class="action">Intento de duplicar mediante rollback</td>
+                        <td class="ban-text">❌ Ban 7d</td>
+                        <td class="ban-text">❌ IPBan 15d</td>
+                        <td class="ban-text">❌ IPBan 30d</td>
+                    </tr>
+
+                    <tr>
+                        <td class="action">Objetos obtenidos mediante exploits</td>
+                        <td class="ban-text">❌ Ban 5d + retirada de objetos</td>
+                        <td class="ban-text">❌ Ban 15d</td>
+                        <td class="ban-text">❌ IPBan 30d</td>
+                    </tr>
+
+                    <tr>
+                        <td class="action">TpaKill</td>
+                        <td class="ban-text">❌ Ban 1d</td>
+                        <td class="ban-text">❌ Ban 3d</td>
+                        <td class="ban-text">❌ Ban 7d</td>
+                    </tr>
+
+                    <tr>
+                        <td class="action">Máquina Anti-AFK</td>
+                        <td class="kick-text">💨 Kick</td>
+                        <td class="ban-text">❌ Ban 1d</td>
+                        <td class="ban-text">❌ Ban 3d</td>
+                    </tr>
+
+                    <tr>
+                        <td class="action">Lag Machine</td>
+                        <td class="ban-text">❌ Ban 7d</td>
+                        <td class="ban-text">❌ IPBan 15d</td>
+                        <td class="ban-text">❌ IPBan 30d</td>
+                    </tr>
+
+                    <tr>
+                        <td class="action">Ataques contra el servidor</td>
+                        <td class="ban-text">❌ IPBan 15d</td>
+                        <td class="ban-text">❌ IPBan 30d</td>
+                        <td class="ban-text">❌ IPBan 30d</td>
+                    </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <div class="success">
+                🧨 <strong>IMPORTANTE:</strong>
+                Raidear, robar, matar jugadores, traicionar alianzas o destruir
+                bases enemigas mediante mecánicas legítimas NO será motivo de sanción.
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- CHAT -->
+
+    <section class="section" id="chat">
+
+        <div class="section-title title-chat">
+            💬 CHAT
+        </div>
+
+        <div class="content">
+
+            <p>
+                EmpireMC permite rivalidad y provocaciones propias de una modalidad
+                Semi-Anárquica, pero el chat sigue teniendo límites.
+            </p>
+
+            <div class="table-wrap">
+
+                <table>
+
+                    <thead>
+                    <tr>
+                        <th>Acción</th>
+                        <th>Primera sanción</th>
+                        <th>Reincidencia</th>
+                        <th>Máximo</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+
+                    <tr>
+                        <td class="action">Spam / Flood</td>
+                        <td class="warn-text">⚠️ Warn</td>
+                        <td class="mute-text">🤐 Mute 1h</td>
+                        <td class="mute-text">🤐 Mute 6h</td>
+                    </tr>
+
+                    <tr>
+                        <td class="action">Exceso de mayúsculas</td>
+                        <td class="warn-text">⚠️ Warn</td>
+                        <td class="mute-text">🤐 Mute 1h</td>
+                        <td class="mute-text">🤐 Mute 3h</td>
+                    </tr>
+
+                    <tr>
+                        <td class="action">Toxicidad excesiva / Insultos reiterados</td>
+                        <td class="warn-text">⚠️ Warn</td>
+                        <td class="mute-text">🤐 Mute 3h</td>
+                        <td class="mute-text">🤐 Mute 1d</td>
+                    </tr>
+
+                    <tr>
+                        <td class="action">Hostigamiento grave</td>
+                        <td class="mute-text">🤐 Mute 6h</td>
+                        <td class="mute-text">🤐 Mute 1d</td>
+                        <td class="ban-text">❌ Ban 3d</td>
+                    </tr>
+
+                    <tr>
+                        <td class="action">Publicidad de servidores</td>
+                        <td class="mute-text">🤐 Mute 1d</td>
+                        <td class="ban-text">❌ Ban 3d</td>
+                        <td class="ban-text">❌ IPBan 7d</td>
+                    </tr>
+
+                    <tr>
+                        <td class="action">Enviar IPs o Discord ajenos</td>
+                        <td class="mute-text">🤐 Mute 1d</td>
+                        <td class="ban-text">❌ Ban 3d</td>
+                        <td class="ban-text">❌ IPBan 7d</td>
+                    </tr>
+
+                    <tr>
+                        <td class="action">Raid de chat</td>
+                        <td class="mute-text">🤐 Mute 6h</td>
+                        <td class="ban-text">❌ Ban 1d</td>
+                        <td class="ban-text">❌ Ban 3d</td>
+                    </tr>
+
+                    <tr>
+                        <td class="action">Amenazas graves reales</td>
+                        <td class="mute-text">🤐 Mute 1d</td>
+                        <td class="ban-text">❌ Ban 3d</td>
+                        <td class="ban-text">❌ Ban 7d</td>
+                    </tr>
+
+                    <tr>
+                        <td class="action">Suplantar identidad</td>
+                        <td class="ban-text">❌ Ban 3d</td>
+                        <td class="ban-text">❌ Ban 7d</td>
+                        <td class="ban-text">❌ Ban 15d</td>
+                    </tr>
+
+                    <tr>
+                        <td class="action">Mute Evading</td>
+                        <td class="ban-text">❌ Ban 1d</td>
+                        <td class="ban-text">❌ Ban 3d</td>
+                        <td class="ban-text">❌ Ban 7d</td>
+                    </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <div class="info">
+                💬 Los mensajes privados entre amigos no serán moderados de la
+                misma forma que el chat público, salvo que involucren amenazas
+                graves, publicidad, acoso serio o situaciones excepcionales.
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- OTROS -->
+
+    <section class="section" id="otros">
+
+        <div class="section-title title-other">
+            📌 OTROS
+        </div>
+
+        <div class="content">
+
+            <p>
+                Estas normas cubren infracciones que no pertenecen directamente
+                a las categorías de Juego o Chat.
+            </p>
+
+            <div class="table-wrap">
+
+                <table>
+
+                    <thead>
+                    <tr>
+                        <th>Acción</th>
+                        <th>Primera sanción</th>
+                        <th>Reincidencia</th>
+                        <th>Máximo</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+
+                    <tr>
+                        <td class="action">Skin inapropiada</td>
+                        <td class="kick-text">💨 Kick</td>
+                        <td class="warn-text">⚠️ Warn</td>
+                        <td class="ban-text">❌ Ban 1d</td>
+                    </tr>
+
+                    <tr>
+                        <td class="action">Nick inapropiado</td>
+                        <td class="kick-text">💨 Kick</td>
+                        <td class="ban-text">❌ Ban 1d</td>
+                        <td class="ban-text">❌ Ban 3d</td>
+                    </tr>
+
+                    <tr>
+                        <td class="action">Nombre inapropiado de objeto/clan</td>
+                        <td class="warn-text">⚠️ Warn + cambio obligatorio</td>
+                        <td class="ban-text">❌ Ban 1d</td>
+                        <td class="ban-text">❌ Ban 3d</td>
+                    </tr>
+
+                    <tr>
+                        <td class="action">Estructuras extremadamente inapropiadas</td>
+                        <td class="warn-text">⚠️ Warn + eliminación</td>
+                        <td class="ban-text">❌ Ban 1d</td>
+                        <td class="ban-text">❌ Ban 3d</td>
+                    </tr>
+
+                    <tr>
+                        <td class="action">Abuso de rango</td>
+                        <td class="warn-text">⚠️ Advertencia</td>
+                        <td class="ban-text">❌ Ban 1d</td>
+                        <td class="ban-text">❌ Ban 3d + retirada de beneficios</td>
+                    </tr>
+
+                    <tr>
+                        <td class="action">Mal uso de /report</td>
+                        <td class="warn-text">⚠️ Warn</td>
+                        <td class="warn-text">⚠️ Warn x3</td>
+                        <td class="ban-text">❌ Ban 1d</td>
+                    </tr>
+
+                    <tr>
+                        <td class="action">Alting para evadir sanciones</td>
+                        <td class="ban-text">❌ Ban 3d</td>
+                        <td class="ban-text">❌ IPBan 7d</td>
+                        <td class="ban-text">❌ IPBan 15d</td>
+                    </tr>
+
+                    <tr>
+                        <td class="action">Boosting artificial</td>
+                        <td class="ban-text">❌ Ban 2d + retirada del progreso</td>
+                        <td class="ban-text">❌ Ban 5d</td>
+                        <td class="ban-text">❌ Ban 10d</td>
+                    </tr>
+
+                    <tr>
+                        <td class="action">AutoClicker / CPS automatizado</td>
+                        <td class="ban-text">❌ Ban 5d</td>
+                        <td class="ban-text">❌ Ban 10d</td>
+                        <td class="ban-text">❌ IPBan 20d</td>
+                    </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <div class="warning">
+                ⚠️ Tener ping alto o una conexión inestable no es una infracción.
+                El Staff podrá expulsar temporalmente a un jugador únicamente
+                cuando su conexión afecte gravemente una actividad o evento.
+            </div>
+
+
+            <h3>👮 Abuso de Staff</h3>
+
+            <p>
+                Los miembros del Staff deberán mantener imparcialidad y no podrán
+                utilizar comandos administrativos para obtener ventajas personales.
+            </p>
+
+            <div class="rule-list">
+
+                <div class="rule-box forbidden">
+                    ❌ Favorecer amigos o conocidos.
+                </div>
+
+                <div class="rule-box forbidden">
+                    ❌ Favorecer clanes.
+                </div>
+
+                <div class="rule-box forbidden">
+                    ❌ Entregar objetos sin autorización.
+                </div>
+
+                <div class="rule-box forbidden">
+                    ❌ Alterar pruebas o investigaciones.
+                </div>
+
+                <div class="rule-box forbidden">
+                    ❌ Filtrar información interna.
+                </div>
+
+                <div class="rule-box forbidden">
+                    ❌ Sancionar por motivos personales.
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- APELACIONES -->
+
+    <section class="section" id="apelaciones">
+
+        <div class="section-title title-appeal">
+            ⚖️ ¿CREES QUE TU SANCIÓN FUE INJUSTA?
+        </div>
+
+        <div class="content">
+
+            <p>
+                Si consideras que una sanción fue aplicada incorrectamente,
+                puedes abrir un ticket de <strong>Apelación</strong>
+                en nuestro Discord.
+            </p>
+
+            <div class="appeal-card">
+
+                <h3>📋 Información necesaria</h3>
+
+                <ul>
+                    <li>🎮 Nick de Minecraft.</li>
+                    <li>🔑 Código de apelación.</li>
+                    <li>📌 Motivo de la sanción.</li>
+                    <li>📝 Explicación de lo ocurrido.</li>
+                    <li>📷 Pruebas, si existen.</li>
+                </ul>
+
+            </div>
+
+            <div class="success">
+                ✅ Podrás apelar durante la duración de tu sanción.
+                No es obligatorio hacerlo únicamente durante las primeras 24 horas.
+            </div>
+
+            <div class="danger">
+                ❌ Mentir, falsificar pruebas o utilizar cuentas alternativas
+                para evadir una sanción podrá provocar el rechazo de la apelación
+                y una sanción adicional.
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ACLARACIONES -->
+
+    <section class="section">
+
+        <div class="section-title">
+            📜 ACLARACIONES IMPORTANTES
+        </div>
+
+        <div class="content">
+
+            <div class="rule-list">
+
+                <div class="rule-box allowed">
+                    🧨 <strong>Raidear bases</strong> está permitido.
+                </div>
+
+                <div class="rule-box allowed">
+                    💰 <strong>Robar recursos</strong> está permitido.
+                </div>
+
+                <div class="rule-box allowed">
+                    ⚔️ <strong>Matar jugadores</strong> está permitido.
+                </div>
+
+                <div class="rule-box allowed">
+                    🤝 <strong>Formar equipos</strong> está permitido.
+                </div>
+
+                <div class="rule-box allowed">
+                    🩸 <strong>Traicionar alianzas</strong> está permitido.
+                </div>
+
+                <div class="rule-box allowed">
+                    🏰 <strong>Grifear bases</strong> mediante sistemas
+                    permitidos está permitido.
+                </div>
+
+                <div class="rule-box forbidden">
+                    🚫 Hacks y modificaciones ilegales NO están permitidos.
+                </div>
+
+                <div class="rule-box forbidden">
+                    🚫 Exploits, dupes y ataques al servidor NO están permitidos.
+                </div>
+
+            </div>
+
+
+            <div class="notice">
+                🛡️ Las sanciones indicadas son una guía para el Staff.
+                Dependiendo de la gravedad, historial, reincidencia y pruebas,
+                una sanción podrá reducirse o aumentarse, pero ningún Ban/IPBan
+                ordinario superará los <strong>30 días</strong>.
+            </div>
+
+        </div>
+    </section>
+
+
+    <footer class="footer">
+
+        <div class="footer-logo">
+            EMPIREMC
+        </div>
+
+        <p>
+            ⚔️ Libertad para jugar.  
+            🛡️ Competencia justa.  
+            👑 Construye tu imperio.
+        </p>
+
+    </footer>
+
+</div>
+
+</body>
+</html>
